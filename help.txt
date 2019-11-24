@@ -1,0 +1,125 @@
+-----------------------------------------
+HTML
+-----------------------------------------
+draggable="true"
+
+contenteditable="true"
+
+
+-----------------------------------------
+CSS
+-----------------------------------------
+cursor: pointer;
+
+transition: background-color 0.2s linear;
+
+rgb(255, 141, 255)
+rgb(255, 87, 207)
+rgb(200, 15, 158)
+
+rgb(103, 194, 255)
+rgb(0, 146, 247)
+rgb(0, 101, 196)
+
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+line-height: 1;
+
+-----------------------------------------
+JS
+-----------------------------------------
+
+// headerElement.addEventListener('dblclick', function (event) {
+    //     headerElement.setAttribute('contenteditable', 'true')
+    //     headerElement.focus()
+    // })
+    // headerElement.addEventListener('blur', function (event) {
+    //     headerElement.removeAttribute('contenteditable')
+    // })
+}
+
+-----------------------------------------
+container
+row
+columns
+column
+    column-header
+    column-footer span
+adder
+    adder span
+note
+
+    drag: курсор двигается при перетаскивании.
+
+    dragStart: пользователь начинает перетаскивание элемента.
+    dragEnd: пользователь отпускает курсор мыши в процессе перетаскивания.
+
+    dragEnter: перетаскиваемый элемент достигает конечного элемента.
+    dragLeave: курсор мыши покидает пределы перетаскиваемого элемента.
+    dragOver: курсор мыши наведен на элемент при перетаскивании.
+    drop: происходит drop элемента.
+
+
+.column-header {
+    background: rgb(247, 190, 105);
+    width: 190px; /*  */
+    border-radius: 4px;
+    padding: 8px;
+    margin: 0;
+    margin-bottom: 8px;
+    margin-right: 8px; /* Задел для кнопки справа */
+
+    text-align: left;
+    font-weight: 700; /* Жирный Bold */  
+}
+
+
+------------------------------------------
+
+.column-header {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700; /* Жирный Bold */
+}
+
+.column-header span {
+    background: rgb(184, 183, 185);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.column-header .my-text {
+    background: rgb(247, 190, 105);
+    width: 190px;
+    /* border-radius: 4px; */
+    /* padding: 8px; */
+    text-align: left;    
+}
+
+.column-header .my-button {
+    display: inline-block;
+    background: rgb(190, 105, 247);
+    width: 34px;
+    /* border-radius: 4px; */
+    /* padding: 8px; */
+    margin-left: 8px;
+    text-align: center;
+}
+------------------------------------------
+
+
+
+------------------------------------------------------
+
+<div class="column" draggable="true" data-column-id="номер столбца">
+                    <p class="column-header">
+                        <span>название столбца</span>
+                        <!-- <span>$</span> -->
+                    </p>
+                    <div data-notes>
+                        <div class="note" draggable="true" data-note-id="номер карточки">название карточки</div>
+                    </div>
+                    <p class="column-footer">
+                        <span data-action-addNote class="action">+ Добавить карточку</span>
+                    </p>
+                </div>

@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-position: top center;
+    background-size: cover;
+    background-image: url(images/black_dog.jpg);
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+	height: 100%;
+	padding: 10px;
+	margin: 10px;
+}
+
+.row {
+	display: flex;
+    align-items: flex-start;
+}
+
+.columns {
+	display: flex;
+	align-items: flex-start;
+}
+
+.column {
+    background: rgb(232, 232, 232);
+    width: 256px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px;
+}
+
+.column-header {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700; /* Жирный Bold */ 
+    /* .column-header span */
+    background: rgb(247, 190, 105);
+    border-radius: 4px;
+    padding: 8px;
+    /* .column-header заголовок */
+    width: 190px;
+    text-align: left;
+     /* .column-header кнопка*/
+    /* display: inline-block;
+    width: 34px;
+    text-align: center;
+    margin-left: 8px;   */
+}
+
+.column-footer  {
+    margin: 16px 0;
+    font-weight: 400; /* Нормальный Normal */   
+}
+
+.adder {
+    background: rgb(232, 232, 232);
+    width: 256px;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 4px;
+}
+
+.adder span {
+    display: block;
+    padding: 8px;
+    margin: 0;
+    font-weight: 700; /* Жирный Bold */
+    background: rgb(103, 194, 255);
+    border-radius: 4px;
+}
+
+.adder span:hover {
+    background-color: rgb(0, 146, 247);
+}
+
+.note {
+    background-color: rgb(255, 141, 255);
+    width: 100%;
+    min-height: 34px;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 400; /* Нормальный Normal */
+}
+
+.note:hover {
+    background-color: rgb(255, 87, 207);
+    cursor: move;
+}
+
+.note:focus {
+	cursor: auto;
+}
+
+.action:hover {
+	cursor: pointer;
+}
+
+/* ------------------------------------------ */
+
+.note.dragged {
+    background-color: rgb(25, 255, 5);
+}
+
+.note.under {
+	background-color: rgb(228, 253, 0);
+}
