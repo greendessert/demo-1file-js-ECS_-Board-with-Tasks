@@ -3,7 +3,7 @@ body {
     background-position: top center;
     background-size: cover;
     background-image: url(images/black_dog.jpg);
-    font-family: 'Noto Sans', sans-serif;
+    font-family: Arial, sans-serif; 
     font-size: 14px;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .column {
-    background: rgb(232, 232, 232);
+    background: #ebecf0;
     width: 256px;
     border-radius: 4px;
     padding: 8px;
@@ -40,7 +40,8 @@ body {
     margin-bottom: 8px;
     font-weight: 700; /* Жирный Bold */ 
     /* .column-header span */
-    background: rgb(247, 190, 105);
+    background: #ff5113;
+    color: #ebecf0;
     border-radius: 4px;
     padding: 8px;
     /* .column-header заголовок */
@@ -55,11 +56,12 @@ body {
 
 .column-footer  {
     margin: 16px 0;
-    font-weight: 400; /* Нормальный Normal */   
+    font-weight: 700; /* Жирный Bold */ 
+    color: #a49791;  
 }
 
 .adder {
-    background: rgb(232, 232, 232);
+    background: #ebecf0;
     width: 256px;
     border-radius: 4px;
     padding: 8px;
@@ -71,27 +73,33 @@ body {
     padding: 8px;
     margin: 0;
     font-weight: 700; /* Жирный Bold */
-    background: rgb(103, 194, 255);
+    color: #ff5113;
     border-radius: 4px;
 }
 
 .adder span:hover {
-    background-color: rgb(0, 146, 247);
+    background-color: #ff5113;
+    color: #ebecf0;
 }
 
 .note {
-    background-color: rgb(255, 141, 255);
+    background-color: #a49791;
+    color: #ffffff;
     width: 100%;
-    min-height: 34px;
+    min-height: 35px;
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 8px;
     text-align: left;
     font-weight: 400; /* Нормальный Normal */
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
 }
 
 .note:hover {
-    background-color: rgb(255, 87, 207);
+    /* background-color: #f4f5f7; */
+    padding: 7px;
+    border: 1px dotted #ff5113;
     cursor: move;
 }
 
@@ -103,12 +111,10 @@ body {
 	cursor: pointer;
 }
 
-/* ------------------------------------------ */
-
 .note.dragged {
-    background-color: rgb(25, 255, 5);
+    color: #ff5113;
 }
 
 .note.under {
-	background-color: rgb(228, 253, 0);
+	opacity: 0.46;
 }
